@@ -166,19 +166,12 @@ The complete **TRACE reasoning dataset (200,000 samples)** will be made publicly
 
 ### Available Models
 
-| **Model** | **Base LLM** | **Training** | **Size** | **Performance** |
-|-----------|--------------|--------------|----------|-----------------|
-| **TRACE-13B** | Vicuna-v1.5-13B | Full Fine-tuning | 13B | **48.1%** W2P |
-| **TRACE-7B** | Vicuna-v1.5-7B | LoRA (r=128) | 7B | Used for analysis |
+| **Model** | **Base LLM** | **Training** | **Size** | **Performance** | **Download** |
+|-----------|--------------|--------------|----------|-----------------|--------------|
+| **TRACE-13B** | Vicuna-v1.5-13B | Full Fine-tuning | 13B | **48.1%** W2P | [🔗 Google Drive](#) |
+| **TRACE-7B** | Vicuna-v1.5-7B | LoRA (r=128) | 7B | Used for analysis | [🔗 Google Drive](#) |
 
-### 📁 Download Links
-
-**Model weights will be made available via Google Drive upon paper acceptance.**
-
-```bash
-# Download links will be provided here upon paper acceptance
-# [Google Drive links placeholder]
-```
+> 💡 **Note**: Model weights will be made available via Google Drive upon paper acceptance. Links will be updated in the table above.
 
 ### 📋 Base Model Requirements
 
