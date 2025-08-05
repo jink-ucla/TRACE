@@ -166,20 +166,14 @@ The complete **TRACE reasoning dataset (200,000 samples)** will be made publicly
 
 ### Available Models
 
-| **Model** | **Base LLM** | **Training** | **Size** | **Performance** | **Download** |
-|-----------|--------------|--------------|----------|-----------------|--------------|
-| **TRACE-13B** | Vicuna-v1.5-13B | Full Fine-tuning | 13B | **48.1%** W2P | [🔗 Google Drive](#) |
-| **TRACE-7B** | Vicuna-v1.5-7B | LoRA (r=128) | 7B | Used for analysis | [🔗 Google Drive](#) |
+| **Model** | **Type** | **Training** | **Size** | **Performance** | **Download** |
+|-----------|----------|--------------|----------|-----------------|--------------|
+| **TRACE-13B** | Fine-tuned | Full Fine-tuning | 13B | **48.1%** W2P | [🔗 Google Drive](#) |
+| **TRACE-7B** | Fine-tuned | LoRA (r=128) | 7B | Used for analysis | [🔗 Google Drive](#) |
+| **Vicuna-v1.5-13B** | Base Model | Pre-trained | 13B | Required for TRACE-13B | [🔗 Google Drive](#) |
+| **Vicuna-v1.5-7B** | Base Model | Pre-trained | 7B | Required for TRACE-7B | [🔗 Google Drive](#) |
 
-> 💡 **Note**: Model weights will be made available via Google Drive upon paper acceptance. Links will be updated in the table above.
-
-### 📋 Base Model Requirements
-
-You'll also need the base Vicuna models:
-- **Vicuna-7B-v1.5**: For TRACE-7B model
-- **Vicuna-13B-v1.5**: For TRACE-13B model
-
-> 💡 **Note**: Model weights are shared via Google Drive due to file size constraints. Links will be provided upon paper acceptance.
+> 💡 **Note**: All model weights will be made available via Google Drive upon paper acceptance. Links will be updated in the table above.
 
 ## TRACE Dataset and Training
 
