@@ -176,13 +176,8 @@ The complete **TRACE reasoning dataset (200,000 samples)** will be made publicly
 **Model weights will be made available via Google Drive upon paper acceptance.**
 
 ```bash
-# Example usage after download
-CUDA_VISIBLE_DEVICES=0 python visualization/attention_map.py \
-    --model-path /path/to/downloaded/trace-7b-lora \
-    --model-base /path/to/vicuna-7b-v1.5 \
-    --dataset-dir /path/to/where2place \
-    --output-dir attention_results \
-    --start-idx 0 --end-idx 25
+# Download links will be provided here upon paper acceptance
+# [Google Drive links placeholder]
 ```
 
 ### 📋 Base Model Requirements
@@ -344,12 +339,12 @@ TRACE provides unique insights into the model's reasoning process through compre
 
 ```bash
 # Batch process Where2Place dataset with reasoning milestone attention
-python visualization/attention_map.py \
-    --model-path trace-v1-vicuna-v1.5-7b \
-    --model-base path/to/base/model \
-    --dataset-dir datasets/where2place \
-    --output-dir output/attention_analysis \
-    --start-idx 0 --end-idx 100
+CUDA_VISIBLE_DEVICES=7 python visualization/attention_map.py \
+    --model-path [MODEL_WEIGHTS_PLACEHOLDER] \
+    --model-base [BASE_MODEL_PLACEHOLDER] \
+    --dataset-dir [DATASET_PLACEHOLDER] \
+    --output-dir where2place_individual_results \
+    --start-idx 0 --end-idx 25
 ```
 
 **Attention Analysis Features:**
