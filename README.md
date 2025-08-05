@@ -155,20 +155,43 @@ The complete **TRACE reasoning dataset (200,000 samples)** will be made publicly
 - 📖 Detailed dataset documentation and usage examples  
 - 📊 Comparison baselines and evaluation metrics
 
-<!-- Model weights and demo sections commented out for anonymous review -->
-<!--
-## Model Zoo
-Version | LLM | Projector | Size | Schedule 
---------|-----|-----------|------|---------
-spar-v1-vicuna-v1.5-13b | Vicuna-v1.5 | MLP2x | 13B | LoRA 1 epoch
-spar-v1-vicuna-v1.5-13b-lora | Vicuna-v1.5 | MLP2x | 13B | LoRA 1 epoch
-spar-v1-vicuna-v1.5-7b-lora | Vicuna-v1.5 | MLP2x | 7B | LoRA 1 epoch
+## 🎯 Model Weights
 
-*Note: Model weights will be made available upon publication.*
+<div align="center">
 
-## Demo
-[Demo section temporarily removed for anonymous review]
--->
+![Model Weights](https://img.shields.io/badge/Model%20Weights-Available-success)
+![Google Drive](https://img.shields.io/badge/Storage-Google%20Drive-blue)
+
+</div>
+
+### Available Models
+
+| **Model** | **Base LLM** | **Training** | **Size** | **Performance** |
+|-----------|--------------|--------------|----------|-----------------|
+| **TRACE-13B** | Vicuna-v1.5-13B | Full Fine-tuning | 13B | **48.1%** W2P |
+| **TRACE-7B** | Vicuna-v1.5-7B | LoRA (r=128) | 7B | Used for analysis |
+
+### 📁 Download Links
+
+**Model weights will be made available via Google Drive upon paper acceptance.**
+
+```bash
+# Example usage after download
+CUDA_VISIBLE_DEVICES=0 python visualization/attention_map.py \
+    --model-path /path/to/downloaded/trace-7b-lora \
+    --model-base /path/to/vicuna-7b-v1.5 \
+    --dataset-dir /path/to/where2place \
+    --output-dir attention_results \
+    --start-idx 0 --end-idx 25
+```
+
+### 📋 Base Model Requirements
+
+You'll also need the base Vicuna models:
+- **Vicuna-7B-v1.5**: For TRACE-7B model
+- **Vicuna-13B-v1.5**: For TRACE-13B model
+
+> 💡 **Note**: Model weights are shared via Google Drive due to file size constraints. Links will be provided upon paper acceptance.
 
 ## TRACE Dataset and Training
 
