@@ -376,11 +376,13 @@ CUDA_VISIBLE_DEVICES=7 python visualization/attention_map.py \
 If you find this work helpful, please consider citing:
 
 ```bibtex
-@article{jin2025trace,
+@misc{park2025tracetextualreasoningaffordance,
   title={TRACE: Textual Reasoning for Affordance Coordinate Extraction},
-  author={Jin, Kaiyuan},
-  journal={arXiv preprint arXiv:2511.01999},
+  author={Sangyun Park and Jin Kim and Yuchen Cui and Matthew S. Brown},
   year={2025},
+  eprint={2511.01999},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
   url={https://arxiv.org/abs/2511.01999}
 }
 ```
