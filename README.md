@@ -69,13 +69,12 @@ Provides clear rationales for why specific spatial locations are selected
 - [📦 Data Samples](#data-samples)
 - [🗂️ Dataset Construction](#dataset-construction)
 - [🏋️ Training Configuration](#training-configuration)
+- [🎯 Model Weights](#model-weights)
 - [📈 Evaluation](#evaluation)
 - [🎨 Visualization](#visualization)
 - [👁️ Attention Analysis](#attention-analysis)
 
 <!-- Demo section temporarily removed for anonymous review -->
-<!-- - [🚀 Demo](#demo) -->
-<!-- - [🎯 Weights](#model-zoo) -->
 
 ---
 
@@ -156,37 +155,13 @@ The complete **TRACE reasoning dataset (200,000 samples)** is now publicly avail
 - 📖 Detailed dataset documentation and usage examples
 - 📊 Comparison baselines and evaluation metrics
 
-## 🎯 Model Weights
-
-<div align="center">
-
-![Model Weights](https://img.shields.io/badge/Model%20Weights-Coming%20Soon-yellow)
-![Google Drive](https://img.shields.io/badge/Storage-Google%20Drive-blue)
-
-</div>
-
-### Available Models
-
-| **Model** | **Type** | **Training** | **Size** | **Performance** | **Download** |
-|-----------|----------|--------------|----------|-----------------|--------------|
-| **TRACE-13B** | Fine-tuned | Full Fine-tuning | 13B | **48.1%** W2P | Coming Soon |
-| **TRACE-7B** | Fine-tuned | LoRA (r=128) | 7B | Used for analysis | Coming Soon |
-| **Vicuna-v1.5-13B** | Base Model | Pre-trained | 13B | Required for TRACE-13B | Coming Soon |
-| **Vicuna-v1.5-7B** | Base Model | Pre-trained | 7B | Required for TRACE-7B | Coming Soon |
-
-> 💡 **Note**: Model weights will be made publicly available soon. Links will be updated in the table above.
-
-## TRACE Dataset and Training
-
-### Dataset Construction
+## 🗂️ Dataset Construction
 
 The **TRACE dataset** consists of **200,000 training samples** created by enhancing the RoboPoint data generation pipeline. The dataset is composed of two data sources:
 - **100,000 novel reasoning-augmented samples** with explicit textual Chain of Reasoning (CoR)
 - **100,000 standard visual instruction-tuning samples** from LVIS and VQA datasets
 
 The key innovation is the programmatic generation of explicit textual reasoning steps using the Gemini API, which breaks down the spatial reasoning process into interpretable steps.
-
-*Note: The complete dataset is now available on HuggingFace at [jink-ucla/TRACE](https://huggingface.co/datasets/jink-ucla/TRACE). See [Data Samples](#data-samples) section for sample data.*
 
 Each data sample includes:
 - Input image and natural language instruction
@@ -199,7 +174,7 @@ Example reasoning structure:
 3. **Target Area Definition**: Define the specific region based on the instruction
 4. **Coordinate Generation**: Output precise normalized coordinates
 
-### Training Configuration
+## 🏋️ Training Configuration
 
 **Model Architecture:**
 - **Base LLM**: Vicuna-v1.5-13B
@@ -227,6 +202,26 @@ Example reasoning structure:
 - Square aspect ratio padding for uniform input
 - Grouping by modality length to minimize padding
 - 12 dataloader workers to prevent bottlenecks
+
+## 🎯 Model Weights
+
+<div align="center">
+
+![Model Weights](https://img.shields.io/badge/Model%20Weights-Coming%20Soon-yellow)
+![Google Drive](https://img.shields.io/badge/Storage-Google%20Drive-blue)
+
+</div>
+
+### Available Models
+
+| **Model** | **Type** | **Training** | **Size** | **Performance** | **Download** |
+|-----------|----------|--------------|----------|-----------------|--------------|
+| **TRACE-13B** | Fine-tuned | Full Fine-tuning | 13B | **48.1%** W2P | Coming Soon |
+| **TRACE-7B** | Fine-tuned | LoRA (r=128) | 7B | Used for analysis | Coming Soon |
+| **Vicuna-v1.5-13B** | Base Model | Pre-trained | 13B | Required for TRACE-13B | Coming Soon |
+| **Vicuna-v1.5-7B** | Base Model | Pre-trained | 7B | Required for TRACE-7B | Coming Soon |
+
+> 💡 **Note**: Model weights will be made publicly available soon. Links will be updated in the table above.
 
 ## 📈 Evaluation
 
@@ -295,7 +290,7 @@ python robopoint/eval/model_vqa.py \
 python robopoint/eval/summarize_vqa.py --answer output/trace-v1-vicuna-v1.5-13b.jsonl
 ```
 
-### 🎨 Visualization
+## 🎨 Visualization
 
 TRACE includes comprehensive visualization tools to analyze model predictions and Chain of Reasoning outputs:
 
