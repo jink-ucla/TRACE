@@ -7,7 +7,8 @@
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)
 ![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)
-![Status](https://img.shields.io/badge/Status-Under%20Review-orange.svg)
+![Status](https://img.shields.io/badge/Status-Published-success.svg)
+[![arXiv](https://img.shields.io/badge/arXiv-2511.01999-b31b1b.svg)](https://arxiv.org/abs/2511.01999)
 
 <!-- For anonymous review - links temporarily removed -->
 <!-- [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://robo-point.github.io) [![Demo](https://img.shields.io/badge/Demo-Live-green)](https://4a1d27fb146d7216fa.gradio.live) [![Data](https://img.shields.io/badge/Data-HuggingFace-yellow)](#data-samples) [![Weights](https://img.shields.io/badge/Model-Weights-red)](#model-zoo) -->
@@ -143,23 +144,23 @@ Showing vacant area identification with reasoning chains
 
 <div align="center">
 
-![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Coming%20Soon-yellow)
+[![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/jink-ucla/TRACE)
 ![Dataset Size](https://img.shields.io/badge/Dataset-200K%20Samples-blue)
 
 </div>
 
-The complete **TRACE reasoning dataset (200,000 samples)** will be made publicly available on **🤗 HuggingFace** upon paper acceptance:
+The complete **TRACE reasoning dataset (200,000 samples)** is now publicly available on **🤗 HuggingFace**: [jink-ucla/TRACE](https://huggingface.co/datasets/jink-ucla/TRACE)
 
 - ✅ Complete training and evaluation splits
 - 🧠 All Chain of Reasoning annotations
-- 📖 Detailed dataset documentation and usage examples  
+- 📖 Detailed dataset documentation and usage examples
 - 📊 Comparison baselines and evaluation metrics
 
 ## 🎯 Model Weights
 
 <div align="center">
 
-![Model Weights](https://img.shields.io/badge/Model%20Weights-Available-success)
+![Model Weights](https://img.shields.io/badge/Model%20Weights-Coming%20Soon-yellow)
 ![Google Drive](https://img.shields.io/badge/Storage-Google%20Drive-blue)
 
 </div>
@@ -168,12 +169,12 @@ The complete **TRACE reasoning dataset (200,000 samples)** will be made publicly
 
 | **Model** | **Type** | **Training** | **Size** | **Performance** | **Download** |
 |-----------|----------|--------------|----------|-----------------|--------------|
-| **TRACE-13B** | Fine-tuned | Full Fine-tuning | 13B | **48.1%** W2P | [🔗 Google Drive](#) |
-| **TRACE-7B** | Fine-tuned | LoRA (r=128) | 7B | Used for analysis | [🔗 Google Drive](#) |
-| **Vicuna-v1.5-13B** | Base Model | Pre-trained | 13B | Required for TRACE-13B | [🔗 Google Drive](#) |
-| **Vicuna-v1.5-7B** | Base Model | Pre-trained | 7B | Required for TRACE-7B | [🔗 Google Drive](#) |
+| **TRACE-13B** | Fine-tuned | Full Fine-tuning | 13B | **48.1%** W2P | Coming Soon |
+| **TRACE-7B** | Fine-tuned | LoRA (r=128) | 7B | Used for analysis | Coming Soon |
+| **Vicuna-v1.5-13B** | Base Model | Pre-trained | 13B | Required for TRACE-13B | Coming Soon |
+| **Vicuna-v1.5-7B** | Base Model | Pre-trained | 7B | Required for TRACE-7B | Coming Soon |
 
-> 💡 **Note**: All model weights will be made available via Google Drive upon paper acceptance. Links will be updated in the table above.
+> 💡 **Note**: Model weights will be made publicly available soon. Links will be updated in the table above.
 
 ## TRACE Dataset and Training
 
@@ -185,7 +186,7 @@ The **TRACE dataset** consists of **200,000 training samples** created by enhanc
 
 The key innovation is the programmatic generation of explicit textual reasoning steps using the Gemini API, which breaks down the spatial reasoning process into interpretable steps.
 
-*Note: The complete dataset will be released on HuggingFace upon paper acceptance. See [Data Samples](#data-samples) section for current availability.*
+*Note: The complete dataset is now available on HuggingFace at [jink-ucla/TRACE](https://huggingface.co/datasets/jink-ucla/TRACE). See [Data Samples](#data-samples) section for sample data.*
 
 Each data sample includes:
 - Input image and natural language instruction
@@ -367,14 +368,24 @@ CUDA_VISIBLE_DEVICES=7 python visualization/attention_map.py \
 
 <div align="center">
 
-![Status](https://img.shields.io/badge/Paper-Under%20Review-orange)
-![Citation](https://img.shields.io/badge/Citation-Coming%20Soon-blue)
+[![arXiv](https://img.shields.io/badge/arXiv-2511.01999-b31b1b.svg)](https://arxiv.org/abs/2511.01999)
+![Status](https://img.shields.io/badge/Paper-Published-success)
 
 </div>
 
-**Note:** This work originally builds upon the foundation of RoboPoint (Yuan et al., 2024) but represents a significant extension with Chain of Reasoning capabilities. 
+If you find this work helpful, please consider citing:
 
-> **🔄 CITATION INFORMATION FOR TRACE WILL BE UPDATED UPON PUBLICATION**
+```bibtex
+@article{jin2025trace,
+  title={TRACE: Textual Reasoning for Affordance Coordinate Extraction},
+  author={Jin, Kaiyuan},
+  journal={arXiv preprint arXiv:2511.01999},
+  year={2025},
+  url={https://arxiv.org/abs/2511.01999}
+}
+```
+
+**Note:** This work originally builds upon the foundation of RoboPoint (Yuan et al., 2024) but represents a significant extension with Chain of Reasoning capabilities.
 
 **📚 Reference to Original Foundation:**
 ```bibtex
